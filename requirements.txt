@@ -5,3 +5,5 @@ plotly
 streamlit
 pandas
 duckdb
+openpyxl
+xlrd

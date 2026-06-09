@@ -3,3 +3,5 @@ langchain_groq
 python-dotenv
 plotly
 streamlit
+pandas
+duckdb

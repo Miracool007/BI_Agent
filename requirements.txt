@@ -1,9 +1,4 @@
 langchain
-langchain_huggingface
 langchain_groq
-langchain_chroma
-langchain_community
-tempfile
 python-dotenv
-langchain_text_splitters
 plolty

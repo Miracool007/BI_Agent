@@ -143,5 +143,5 @@ if uploaded_file:
                     st.markdown(f"🤖 **AI:** {msg['content']}")
 
         except Exception as e:
-            st.error(str(e))
+            st.warning(f"Error in uploaded file: {e}")
     

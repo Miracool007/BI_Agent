@@ -31,8 +31,16 @@ if "last_sql" not in st.session_state:
     st.session_state.last_sql = ""
 
 if uploaded_file:
-
-    df = load_data(uploaded_file)
+    try:
+        df = load_data(uploaded_file)
+    except UnicodeDecodeError:
+        st.warning("⚠️ Could not read this file. It may have an unsupported encoding. " \
+        "Try re-saving it as UTF-8 CSV and uploading again.")
+        st.stop()
+    except Exception:
+        st.warning("⚠️ Something went wrong while loading your file. " \
+        "Please check that it is a valid CSV or Excel file and try again.")
+        st.stop()
 
     st.success("Dataset Loaded Successfully")
 
